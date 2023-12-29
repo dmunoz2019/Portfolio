@@ -217,6 +217,8 @@ nav{
     z-index: -100;
 }
 
+
+
 header{
     position: relative;
     padding-top: 2rem;
@@ -429,41 +431,114 @@ section .header {
 
 }
 
-
-
-
-
-/* Basic styling for the parallax section */
-.parallax {
-    position: relative;
-    overflow: hidden;
-    height: 400px; /* Adjust as needed */
+footer {
+    position:inherit;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);    
+    gap: 2rem;
+    /* set background image */
 }
 
-/* Styling for the parallax background */
-.parallax-bg {
-    /* Use a background image of your choice */
-    background-image: url('./images/DALL·E\ 2023-12-22\ 15.54.44\ -\ A\ vibrant\ and\ mystical\ space\ background\ with\ planets\,\ using\ a\ specific\ color\ palette_\ antiflash-white\,\ turquoise\,\ blue-ncs\,\ amethyst\,\ blue-violet\,\ gra.png');
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+footer .column .logo{
+    max-width: 100px;
+    /* how to center this img */
+    display: block;
+  
 }
 
-/* Styling for the content in the parallax section */
-.parallax-content {
-    position: relative;
-    z-index: 1; /* Ensures content is above the background */
-    padding: 20px;
-    color: white; /* Adjust text color as needed */
-    text-align: center;
+footer .column {
+    margin-bottom: 1rem;
+    color: var(--antiflash-white);
+    padding-left: 15%;
+    background-color: var(--black-coral);
+}
+
+footer .column .social {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    margin-bottom: 1rem;
+    color: var(--antiflash-white);
+    gap: 2rem;
+    margin-top: 1rem;
 }
+
+footer .column a {
+    font-size: large;
+    display: block;
+    gap: 2rem;
+    line-height: 3rem;
+    color: var(--turquoise);
+}
+
+footer .column a:hover {
+    color: var(--amethyst);
+}
+
+/* Incorporando la paleta de colores en el estilo del modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(22, 0, 104, 0.1); /* Black with opacity */
+    padding-top: 12vh; /* Location of the box */
+}
+
+.modal-content {
+    background-color: var(--antiflash-white);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid var(--black-coral);
+    width: 50%; /* Adjusted width */
+    border-radius: 10px; /* Rounded corners */
+
+}
+
+/* The Close Button */
+.close {
+    color: var(--grape);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--blue-violet);
+}
+
+/* Form and input styles inside the modal */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-content form input,
+.modal-content form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--black-coral);
+}
+
+.modal-content form button {
+    background-color: var(--turquoise);
+    color: var(--antiflash-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content form button:hover {
+    background-color: var(--blue-ncs);
+}
+
+
+
+
